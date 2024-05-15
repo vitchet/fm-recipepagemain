@@ -1,8 +1,65 @@
-@import url("https://fonts.google.com/specimen/Young+Serif");
-@import url("https://fonts.google.com/specimen/Young+Serif");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --nutmeg-color: hsl(14, 45%, 36%);
+    --dark-raspberry-color: hsl(332, 51%, 32%);
+    --white-color: hsl(0, 0%, 100%);
+    --rose-white-color: hsl(330, 100%, 98%);
+    --eggshell-color: hsl(30, 54%, 90%);
+    --light-grey-color: hsl(30, 18%, 87%);
+    --wenge-brown-color: hsl(30, 10%, 34%);
+    --dark-charcoal-color: hsl(24, 5%, 18%);
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--eggshell-color);
+}
+
+main {
+    width: 1440px;
+    margin: 6rem auto 0;
+    padding: 3.5rem 0;
+    background-color: var(--white-color);
+}
+
+main header {
+    margin: 0 auto;
+    width: 1300px;
+}
+
+main header img {
+    display: block;
+    margin: 0 auto 3rem;
+}
+
+article {
+    margin: 0 auto;
+    width: 1300px;
+}
+
+section {
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 1.5rem 0;
+    color: var(--dark-charcoal-color);
+    font-family: "Young Serif", serif;
+    font-size: 5rem;
+    font-weight: 400;   
+}
+
+p { 
+    margin: 1rem 0;
+    color: var(--wenge-brown-color);
+    font-family: Outfit, "sans-serif";
+    font-size: 2rem;
 }
