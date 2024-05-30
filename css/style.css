@@ -25,7 +25,7 @@ body {
 
 main {
     width: 1440px;
-    margin: 6rem auto 0;
+    margin: 6rem auto;
     padding: 3.5rem 0;
     background-color: var(--white-color);
     border-radius: 2rem;
@@ -40,6 +40,15 @@ main > header img {
     display: block;
     margin: 0 auto 3rem;
     border-radius: 1rem;
+}
+
+footer {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+footer a {
+    color: hsl(228, 45%, 44%);
 }
 
 .prep-time {
@@ -83,7 +92,12 @@ li {
     padding-left: 0.3em;
 }
 
-li, p, th {
+hr {
+    margin: 3rem 0;
+    border: 1px solid var(--light-grey-color);
+}
+
+li, p {
     margin: 1rem 0;
     color: var(--wenge-brown-color);
     font-family: Outfit, "sans-serif";
@@ -104,11 +118,30 @@ header li::before {
     color: var(--dark-raspberry-color);
 }
 
-.attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+table {
+    width: 1330px;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+tr {
+    display: block;
+    padding: 1rem 4rem;
+    border-bottom: 1px solid var(--light-grey-color);
+}
+
+th, td {
+    width: 37rem;
+    text-align: left;
+    font-family: Outfit, "sans-serif";
+}
+
+th {
+    font-weight: 400;
+    font-size: 2rem;
+    color: var(--wenge-brown-color);
+}
+
+td {
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--nutmeg-color)
+}
