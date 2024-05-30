@@ -28,25 +28,30 @@ main {
     margin: 6rem auto 0;
     padding: 3.5rem 0;
     background-color: var(--white-color);
+    border-radius: 2rem;
 }
 
-main header {
+main > header {
     margin: 0 auto;
     width: 1300px;
 }
 
-main header img {
+main > header img {
     display: block;
     margin: 0 auto 3rem;
+    border-radius: 1rem;
+}
+
+.prep-time {
+    margin: 4rem auto;
+    padding: 1.5rem 3rem;
+    background-color: var(--rose-white-color);
+    border-radius: 1rem;
 }
 
 article {
     margin: 0 auto;
     width: 1300px;
-}
-
-section {
-    margin: 0 auto;
 }
 
 h1 {
@@ -98,3 +103,12 @@ header li::before {
     content: "•";
     color: var(--dark-raspberry-color);
 }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
