@@ -57,9 +57,44 @@ h1 {
     font-weight: 400;   
 }
 
-p { 
+h2 {
+    margin: 1rem 0;
+    color: var(--nutmeg-color);
+    font-family: "Young Serif", serif;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+h3 {
+    margin: 1rem 0;
+    color: var(--dark-raspberry-color);
+    font-family: Outfit, "sans-serif";
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+li {
+    list-style-type: none;
+    padding-left: 0.3em;
+}
+
+li, p, th {
     margin: 1rem 0;
     color: var(--wenge-brown-color);
     font-family: Outfit, "sans-serif";
     font-size: 2rem;
+}
+
+li::before {
+    padding-right: 1.3em;
+}
+
+article li::before {
+    content: "▪";
+    color: var(--nutmeg-color);
+}
+
+header li::before { 
+    content: "•";
+    color: var(--dark-raspberry-color);
 }
