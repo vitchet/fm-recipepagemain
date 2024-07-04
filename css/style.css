@@ -225,10 +225,14 @@ body {
 footer {
     font-size: 0.75rem;
     text-align: center;
-}
 
-footer a {
-    color: hsl(228, 45%, 44%);
+    .nowrap {
+        white-space: nowrap;
+    }
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
 }
 
 @media screen and (min-width: 576px) {
