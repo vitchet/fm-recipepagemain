@@ -99,7 +99,7 @@ body {
         font-family: Outfit, "sans-serif";
     }
 
-    header {
+    >header {
         display: flex;
         flex-flow: column nowrap;
         gap: 1rem;
