@@ -187,21 +187,22 @@ body {
 
             table {
                 tr {
-                    display: block;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    gap: 2rem;
                     padding: 0.5rem 2rem;
                     border-bottom: 1px solid var(--light-grey-color);
                 }
 
                 th,
                 td {
-                    width: 45%;
-                    display: inline-block;
+                    display: block;
+                    width: 50%;
                     text-align: left;
                     font-family: Outfit, "sans-serif";
                 }
 
                 th {
-                    margin-right: 2.25rem;
                     font-weight: 400;
                 }
 
