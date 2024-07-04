@@ -72,7 +72,7 @@ body {
     width: clamp(var(--width-min), var(--width-val), var(--width-max));
     padding: 2rem;
     background-color: var(--white-color);
-    border-radius: 2rem;
+    border-radius: 1rem;
 
     ul {
         list-style-type: none;
@@ -102,15 +102,14 @@ body {
         flex-flow: column nowrap;
         gap: 1rem;
 
+        img {
+            border-radius: 0.5rem;
+        }
 
         .preface {
             display: flex;
             flex-flow: column nowrap;
             gap: 0.5rem;
-
-            img {
-                border-radius: 1rem;
-            }
 
             h1 {
                 color: var(--dark-charcoal-color);
@@ -128,7 +127,7 @@ body {
         }
 
         .prep-time {
-            padding: 0.75rem 1.5rem;
+            padding: 1.5rem;
             background-color: var(--rose-white-color);
             border-radius: 1rem;
 
@@ -167,7 +166,7 @@ body {
             ol {
                 display: flex;
                 flex-flow: column nowrap;
-                gap: 0.5rem;
+                gap: 0.75rem;
 
                 li::marker {
                     color: var(--nutmeg-color);
@@ -179,6 +178,10 @@ body {
                 li::marker {
                     content: "▪";
                 }
+            }
+
+            ol {
+                gap: 1rem;
             }
 
             hr {
@@ -210,13 +213,17 @@ body {
                     font-weight: 600;
                     color: var(--nutmeg-color);
                 }
+
+                :last-child {
+                    border: none;
+                }
             }
         }
     }
 }
 
 footer {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     text-align: center;
 }
 
