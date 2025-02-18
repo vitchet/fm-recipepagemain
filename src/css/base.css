@@ -1,0 +1,23 @@
+@layer base {
+    :root {
+        font-size: 2.25vh;
+    }
+
+    @font-face {
+        font-family: Outfit;
+        src: url("../../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+    }
+
+    @font-face {
+        font-family: Young-Serif;
+        src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+    }
+
+    section {
+        @apply pr-4 pl-4;
+    }
+
+    .v-container {
+        @apply flex flex-col flex-nowrap;
+    }
+}

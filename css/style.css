@@ -138,6 +138,8 @@
     --color-light-grey: hsl(30, 18%, 87%);
     --color-wenge-brown: hsl(30, 10%, 34%);
     --color-dark-charcoal: hsl(24, 5%, 18%);
+    --font-outfit: Outfit, "sans-serif";
+    --font-young-serif: "Young Serif", serif;
   }
 }
 @layer base {
@@ -282,15 +284,55 @@
   }
 }
 @layer utilities {
+  .static {
+    position: static;
+  }
   .contents {
     display: contents;
+  }
+  .flex {
+    display: flex;
   }
   .table {
     display: table;
   }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-nowrap {
+    flex-wrap: nowrap;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-20 {
+    gap: calc(var(--spacing) * 20);
+  }
+  .font-outfit {
+    font-family: var(--font-outfit);
+  }
 }
-:root {
-  font-size: 4vh;
+@layer base {
+  :root {
+    font-size: 2.25vh;
+  }
+  @font-face {
+    font-family: Outfit;
+    src: url("../../assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+  }
+  @font-face {
+    font-family: Young-Serif;
+    src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf");
+  }
+  section {
+    padding-right: calc(var(--spacing) * 4);
+    padding-left: calc(var(--spacing) * 4);
+  }
+  .v-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 @keyframes spin {
   to {
