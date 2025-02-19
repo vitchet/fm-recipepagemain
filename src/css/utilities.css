@@ -1,0 +1,7 @@
+@utility v-container {
+    @apply flex flex-col flex-nowrap;
+}
+
+@utility h-container {
+    @apply flex flex-row flex-nowrap;
+}

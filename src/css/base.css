@@ -13,15 +13,31 @@
         src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf");
     }
 
+    .recipe-page hr {
+        @apply text-light-grey ml-8 mr-8;
+    }
+
     .recipe-page section {
-        @apply mr-8 ml-8;
+        @apply v-container gap-4 mr-8 ml-8;
     }
 
-    .v-container {
-        @apply flex flex-col flex-nowrap;
+    .recipe-page section h2 {
+        @apply text-nutmeg text-2.5xl font-young-serif font-medium;
     }
 
-    .h-container {
-        @apply flex flex-row flex-nowrap;
+    .recipe-page ul li {
+        @apply h-container items-center ml-2;
+    }
+
+    .recipe-page ul li .marker {
+        @apply mr-7;
+    }
+
+    .recipe-page ol {
+        @apply list-decimal;
+    }
+
+    .recipe-page ol li {
+        @apply ml-6 pl-4 marker:text-nutmeg marker:font-bold;
     }
 }
