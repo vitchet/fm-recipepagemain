@@ -285,12 +285,6 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
-  .relative {
-    position: relative;
-  }
   .static {
     position: static;
   }
@@ -302,38 +296,14 @@
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  .block {
-    display: block;
-  }
   .contents {
     display: contents;
   }
-  .flex {
-    display: flex;
-  }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .list-item {
-    display: list-item;
+  .hidden {
+    display: none;
   }
   .table {
     display: table;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
-  }
-  .resize {
-    resize: both;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -347,10 +317,6 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-rose-white {
     background-color: var(--color-rose-white);
   }
@@ -360,14 +326,8 @@
   .pr-6 {
     padding-right: calc(var(--spacing) * 6);
   }
-  .pr-7 {
-    padding-right: calc(var(--spacing) * 7);
-  }
   .pl-6 {
     padding-left: calc(var(--spacing) * 6);
-  }
-  .pl-7 {
-    padding-left: calc(var(--spacing) * 7);
   }
   .font-outfit {
     font-family: var(--font-outfit);
@@ -403,13 +363,6 @@
   .text-wenge-brown {
     color: var(--color-wenge-brown);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
 }
 @layer base {
   :root {
@@ -443,6 +396,12 @@
     font-weight: var(--font-weight-medium);
     color: var(--color-nutmeg);
   }
+  .recipe-page ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: calc(var(--spacing) * 2);
+  }
   .recipe-page ul li {
     margin-left: calc(var(--spacing) * 2);
     display: flex;
@@ -454,7 +413,11 @@
     margin-right: calc(var(--spacing) * 7);
   }
   .recipe-page ol {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     list-style-type: decimal;
+    gap: calc(var(--spacing) * 2);
   }
   .recipe-page ol li {
     margin-left: calc(var(--spacing) * 6);
@@ -473,6 +436,20 @@
     &::marker {
       color: var(--color-nutmeg);
     }
+  }
+  .recipe-page table {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .recipe-page table tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: left;
+  }
+  .recipe-page table * {
+    flex-basis: 100%;
   }
 }
 @keyframes spin {
@@ -501,42 +478,7 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateX(0);
-}
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateY(0);
-}
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateZ(0);
-}
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewX(0);
-}
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewY(0);
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
 }

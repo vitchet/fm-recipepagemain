@@ -25,6 +25,10 @@
         @apply text-nutmeg text-2.5xl font-young-serif font-medium;
     }
 
+    .recipe-page ul {
+        @apply v-container gap-2;
+    }
+
     .recipe-page ul li {
         @apply h-container items-center ml-2;
     }
@@ -34,10 +38,22 @@
     }
 
     .recipe-page ol {
-        @apply list-decimal;
+        @apply v-container gap-2 list-decimal;
     }
 
     .recipe-page ol li {
         @apply ml-6 pl-4 marker:text-nutmeg marker:font-bold;
+    }
+
+    .recipe-page table {
+        @apply v-container;
+    }
+
+    .recipe-page table tr {
+        @apply h-container text-left;
+    }
+
+    .recipe-page table *{
+        @apply basis-full;
     }
 }
