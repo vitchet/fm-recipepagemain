@@ -1,6 +1,6 @@
 @layer base {
     :root {
-        font-size: 2.25vh;
+        font-size: 4.25vw;
     }
 
     @font-face {
@@ -9,15 +9,19 @@
     }
 
     @font-face {
-        font-family: Young-Serif;
+        font-family: "Young Serif";
         src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf");
     }
 
-    section {
-        @apply pr-4 pl-4;
+    .recipe-page section {
+        @apply mr-8 ml-8;
     }
 
     .v-container {
         @apply flex flex-col flex-nowrap;
+    }
+
+    .h-container {
+        @apply flex flex-row flex-nowrap;
     }
 }
