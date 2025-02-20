@@ -1,4 +1,4 @@
-/*! tailwindcss v4.0.6 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v4.0.7 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -138,6 +138,7 @@
     --color-light-grey: hsl(30, 18%, 87%);
     --color-wenge-brown: hsl(30, 10%, 34%);
     --color-dark-charcoal: hsl(24, 5%, 18%);
+    --color-blue: blue;
     --font-outfit: Outfit, "sans-serif";
     --font-young-serif: "Young Serif", serif;
     --text-2\.5xl: 1.7rem;
@@ -285,6 +286,12 @@
   }
 }
 @layer utilities {
+  .collapse {
+    visibility: collapse;
+  }
+  .relative {
+    position: relative;
+  }
   .static {
     position: static;
   }
@@ -296,14 +303,41 @@
     flex-direction: column;
     flex-wrap: nowrap;
   }
+  .block {
+    display: block;
+  }
   .contents {
     display: contents;
   }
-  .hidden {
-    display: none;
+  .flex {
+    display: flex;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .list-item {
+    display: list-item;
   }
   .table {
     display: table;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .grow-1 {
+    flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
@@ -317,6 +351,10 @@
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .bg-rose-white {
     background-color: var(--color-rose-white);
   }
@@ -328,6 +366,9 @@
   }
   .pl-6 {
     padding-left: calc(var(--spacing) * 6);
+  }
+  .text-center {
+    text-align: center;
   }
   .font-outfit {
     font-family: var(--font-outfit);
@@ -343,6 +384,10 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -351,22 +396,29 @@
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
   }
+  .text-blue {
+    color: var(--color-blue);
+  }
   .text-dark-charcoal {
     color: var(--color-dark-charcoal);
   }
   .text-dark-raspberry {
     color: var(--color-dark-raspberry);
   }
-  .text-nutmeg {
-    color: var(--color-nutmeg);
-  }
   .text-wenge-brown {
     color: var(--color-wenge-brown);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
 }
 @layer base {
   :root {
-    font-size: 4.25vw;
+    font-size: 4.275vw;
   }
   @font-face {
     font-family: Outfit;
@@ -376,12 +428,14 @@
     font-family: "Young Serif";
     src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf");
   }
-  .recipe-page hr {
+}
+.recipe-page {
+  hr {
     margin-right: calc(var(--spacing) * 8);
     margin-left: calc(var(--spacing) * 8);
     color: var(--color-light-grey);
   }
-  .recipe-page section {
+  section {
     margin-right: calc(var(--spacing) * 8);
     margin-left: calc(var(--spacing) * 8);
     display: flex;
@@ -389,37 +443,38 @@
     flex-wrap: nowrap;
     gap: calc(var(--spacing) * 4);
   }
-  .recipe-page section h2 {
+  section h2 {
     font-family: var(--font-young-serif);
     font-size: var(--text-2\.5xl);
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
     color: var(--color-nutmeg);
   }
-  .recipe-page ul {
+  ul {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: calc(var(--spacing) * 2);
   }
-  .recipe-page ul li {
+  ul li {
     margin-left: calc(var(--spacing) * 2);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
   }
-  .recipe-page ul li .marker {
+  ul li .marker {
     margin-right: calc(var(--spacing) * 7);
+    color: var(--color-nutmeg);
   }
-  .recipe-page ol {
+  ol {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     list-style-type: decimal;
     gap: calc(var(--spacing) * 2);
   }
-  .recipe-page ol li {
+  ol li {
     margin-left: calc(var(--spacing) * 6);
     padding-left: calc(var(--spacing) * 4);
     & *::marker {
@@ -437,19 +492,40 @@
       color: var(--color-nutmeg);
     }
   }
-  .recipe-page table {
+  tbody {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    gap: calc(var(--spacing) * 4);
   }
-  .recipe-page table tr {
+  tbody :last-child {
+    --tw-border-style: none;
+    border-style: none;
+  }
+  tbody tr {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    --tw-border-style: solid;
+    border-style: solid;
+    border-color: var(--color-light-grey);
+    padding-bottom: calc(var(--spacing) * 2);
     text-align: left;
   }
-  .recipe-page table * {
+  tbody tr * {
     flex-basis: 100%;
+  }
+  tbody th {
+    padding-left: calc(var(--spacing) * 8);
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  tbody td {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-nutmeg);
   }
 }
 @keyframes spin {
@@ -478,7 +554,42 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateX(0);
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateY(0);
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: rotateZ(0);
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewX(0);
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: skewY(0);
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }

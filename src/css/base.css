@@ -1,6 +1,6 @@
 @layer base {
     :root {
-        font-size: 4.25vw;
+        font-size: 4.275vw;
     }
 
     @font-face {
@@ -13,47 +13,4 @@
         src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf");
     }
 
-    .recipe-page hr {
-        @apply text-light-grey ml-8 mr-8;
-    }
-
-    .recipe-page section {
-        @apply v-container gap-4 mr-8 ml-8;
-    }
-
-    .recipe-page section h2 {
-        @apply text-nutmeg text-2.5xl font-young-serif font-medium;
-    }
-
-    .recipe-page ul {
-        @apply v-container gap-2;
-    }
-
-    .recipe-page ul li {
-        @apply h-container items-center ml-2;
-    }
-
-    .recipe-page ul li .marker {
-        @apply mr-7;
-    }
-
-    .recipe-page ol {
-        @apply v-container gap-2 list-decimal;
-    }
-
-    .recipe-page ol li {
-        @apply ml-6 pl-4 marker:text-nutmeg marker:font-bold;
-    }
-
-    .recipe-page table {
-        @apply v-container;
-    }
-
-    .recipe-page table tr {
-        @apply h-container text-left;
-    }
-
-    .recipe-page table *{
-        @apply basis-full;
-    }
 }

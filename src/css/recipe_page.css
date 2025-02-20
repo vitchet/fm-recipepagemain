@@ -1,0 +1,58 @@
+
+.recipe-page {
+    hr {
+        @apply text-light-grey ml-8 mr-8;
+    }
+    
+    section {
+        @apply v-container gap-4 mr-8 ml-8;
+    }
+    
+    section h2 {
+        @apply text-nutmeg text-2.5xl font-young-serif font-medium;
+    }
+    
+    ul {
+        @apply v-container gap-2;
+    }
+    
+    ul li {
+        @apply h-container items-center ml-2;
+    }
+    
+    ul li .marker {
+        @apply mr-7 text-nutmeg;
+    }
+    
+    ol {
+        @apply v-container gap-2 list-decimal;
+    }
+    
+    ol li {
+        @apply ml-6 pl-4 marker:text-nutmeg marker:font-bold;
+    }
+    
+    tbody {
+        @apply v-container gap-4;
+    }
+
+    tbody :last-child {
+        @apply border-none;
+    }
+
+    tbody tr {
+        @apply h-container text-left border-b border-solid border-light-grey pb-2;
+    }
+    
+    tbody tr *{
+        @apply basis-full;
+    }
+
+    tbody th {
+        @apply font-normal pl-8;
+    }
+
+    tbody td {
+        @apply font-bold text-nutmeg;
+    }
+}
