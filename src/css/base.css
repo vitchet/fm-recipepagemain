@@ -1,6 +1,6 @@
 @layer base {
     :root {
-        font-size: 4.275vw;
+        font-size: 16px;
     }
 
     @font-face {
@@ -12,5 +12,4 @@
         font-family: "Young Serif";
         src: url("../../assets/fonts/young-serif/YoungSerif-Regular.ttf");
     }
-
 }
