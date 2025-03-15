@@ -47,4 +47,4 @@ export const data = {
         protein: "20g",
         fat: "22g"
     }
-}
+};

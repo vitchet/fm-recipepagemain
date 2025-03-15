@@ -16,13 +16,13 @@
 
 <body class="v-container items-center gap-4 bg-eggshell pb-4 sm:p-8 sm:pb-4">
   <main class="grow-1 min-w-[275px] max-w-[725px] bg-white sm:rounded-3xl">
-    <article class="recipe-page v-container gap-8 font-outfit text-wenge-brown">
+    <article id="recipe-page" class="recipe-page v-container gap-8 font-outfit text-wenge-brown">
       <header class="v-container gap-10">
         <figure class="sm:pl-8 sm:pr-8 sm:pt-8">
           <img src="assets/images/image-omelette.jpeg" alt="food-preview" width="1312" height="600" class="sm:rounded-xl"/>
         </figure>
         <section class="v-container gap-4">
-          <h1 class="text-4xl text-dark-charcoal font-medium font-young-serif">Simple Omelette Recipe</h1>
+          <h1 class="text-4xl text-dark-charcoal font-medium font-young-serif">{{ data.title }}</h1>
           <p>
             An easy and quick dish, perfect for any meal. This classic
             omelette combines beaten eggs cooked to perfection, optionally
@@ -149,6 +149,8 @@
     </span>
     <span class="nowrap"> Coded by <a href="#" class="text-blue">Vitaly Chetverikov</a>.</span>
   </footer>
+
+  <script src="src/js/main.js" type="module"></script>
 </body>
 
 </html>
