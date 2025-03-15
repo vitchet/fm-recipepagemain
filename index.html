@@ -19,30 +19,26 @@
     <article id="recipe-page" class="recipe-page v-container gap-8 font-outfit text-wenge-brown">
       <header class="v-container gap-10">
         <figure class="sm:pl-8 sm:pr-8 sm:pt-8">
-          <img src="assets/images/image-omelette.jpeg" alt="food-preview" width="1312" height="600" class="sm:rounded-xl"/>
+          <img :src="data.image" alt="food-preview" width="1312" height="600" class="sm:rounded-xl"/>
         </figure>
         <section class="v-container gap-4">
           <h1 class="text-4xl text-dark-charcoal font-medium font-young-serif">{{ data.title }}</h1>
-          <p>
-            An easy and quick dish, perfect for any meal. This classic
-            omelette combines beaten eggs cooked to perfection, optionally
-            filled with your choice of cheese, vegetables, or meats.
-          </p>
+          <p>{{ data.description }}</p>
         </section>
         <section class="bg-rose-white gap-3 text-wenge-brown p-5 pr-6 pl-6 rounded-xl">
           <h2 class="text-dark-raspberry font-bold font-outfit text-lg">Preparation time</h2>
           <ul>
             <li>
               <span class="marker text-dark-raspberry mr-6">•</span>
-              <span><b>Total:</b> Approximately 10 minutes</span>
+              <span><b>Total: </b>{{ data.prepTime.total}}</span>
             </li>
             <li>
               <span class="marker text-dark-raspberry mr-6">•</span>
-              <span><b>Preparation:</b> 5 minutes</span>
+              <span><b>Preparation: </b> {{ data.prepTime.preparation }}</span>
             </li>
             <li>
               <span class="marker text-dark-raspberry mr-6">•</span>
-              <span><b>Cooking:</b> 5 minutes</span>
+              <span><b>Cooking: </b>{{ data.prepTime.cooking }}</span>
             </li>
           </ul>
         </section>
@@ -51,26 +47,10 @@
         <header>
           <h2>Ingredients</h2>
         </header>
-        <ul>
+        <ul v-for="ingredient in data.ingredients">
           <li>
             <span class="marker">▪</span>
-            <span>2-3 large eggs</span>
-          </li>
-          <li>
-            <span class="marker">▪</span>
-            <span>Salt, to taste</span>
-          </li>
-          <li>
-            <span class="marker">▪</span> 
-            <span>Pepper, to taste</span>
-          </li>
-          <li>
-            <span class="marker">▪</span> 
-            <span>1 tablespoon of butter or oil</span>
-          </li>
-          <li>
-            <span class="marker">▪</span> 
-            <span>Optional fillings: cheese, diced vegetables, cooked meats, herbs</span>
+            <span>{{ ingredient }}</span>
           </li>
         </ul>
       </section>
@@ -79,34 +59,9 @@
         <header>
           <h2>Instructions</h2>
         </header>
-        <ol>
+        <ol v-for="instruction in data.instructions">
           <li>
-            <b>Beat the eggs:</b> In a bowl, beat the eggs with a pinch of
-            salt and pepper until they are well mixed. You can add a
-            tablespoon of water or milk for a fluffier texture.
-          </li>
-          <li>
-            <b>Heat the pan:</b> Place a non-stick frying pan over medium heat
-            and add butter or oil.
-          </li>
-          <li>
-            <b>Cook the omelette:</b> Once the butter is melted and bubbling,
-            pour in the eggs. Tilt the pan to ensure the eggs evenly coat the
-            surface.
-          </li>
-          <li>
-            <b>Add fillings (optional):</b> When the eggs begin to set at the
-            edges but are still slightly runny in the middle, sprinkle your
-            chosen fillings over one half of the omelette.
-          </li>
-          <li>
-            <b>Fold and serve:</b> As the omelette continues to cook,
-            carefully lift one edge and fold it over the fillings. Let it cook
-            for another minute, then slide it onto a plate.
-          </li>
-          <li>
-            <b>Enjoy:</b> Serve hot, with additional salt and pepper if
-            needed.
+            <b>{{ instruction.preface }}: </b>{{ instruction.main }}
           </li>
         </ol>
       </section>
@@ -115,27 +70,24 @@
         <header>
           <h2>Nutrition</h2>
         </header>
-        <p>
-          The table below shows nutritional values per serving without the
-          additional fillings.
-        </p>
+        <p>{{ data.nutrition.description }}</p>
         <table>
           <tbody>
             <tr>
               <th scope="row">Calories</th>
-              <td>277kcal</td>
+              <td>{{ data.nutrition.calories }}</td>
             </tr>
             <tr>
               <th scope="row">Carbs</th>
-              <td>0g</td>
+              <td>{{ data.nutrition.carbs }}</td>
             </tr>
             <tr>
               <th scope="row">Protein</th>
-              <td>20g</td>
+              <td>{{ data.nutrition.protein }}</td>
             </tr>
             <tr>
               <th scope="row">Fat</th>
-              <td>22g</td>
+              <td>{{ data.nutrition.fat }}</td>
             </tr>
           </tbody>
         </table>
